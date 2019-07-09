@@ -33,13 +33,10 @@ class TheSquare
     void deviate()
     {
           PVector sideSpeed = new PVector(-1.8*2,0);
-          //if(pos.y>height/2 + 22*2)
                           
           if(mouseX>width/2)
           {   
             jump();  
-              /*if(pos.y>height/2 + 22 && pos.x>22 && right)
-                  jump();*/
               sideSpeed.mult(-1);
               vel.add(sideSpeed);
               right = true;
@@ -48,20 +45,14 @@ class TheSquare
           else
           {
             jump();  
-              /*if(pos.y>height/2 + 22 && pos.x< width - 22 && left)
-                  jump();*/
               vel.add(sideSpeed);
               left = true;
               right = false;
           }
-          // if(keyCode == UP)
-          //   collision = false;
     }
     
     void jump()
     {
-        // jumpingSound.amp(0.1);
-        // jumpingSound.play();
         vel.mult(0);
         vel.add(0,-6*2);
     }
